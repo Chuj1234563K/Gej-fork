@@ -1,0 +1,28 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Windows-CRD
+
+on: 
+  workflow_dispatch:
+    inputs:
+      authcode:
+        description: '.'
+        required: false
+      pincode:
+        description: '.'
+        required: false
+  
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Initializing Setup
+      run: ./setup.ps1
+    - name: Keep Alive
+      run: ./timeout.ps1
+
+  
+    
+

